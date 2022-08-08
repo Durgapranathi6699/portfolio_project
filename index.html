@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <image src="cross.png" onclick="closemenu()"class="fav" width="40px"></image>
+               
+            </ul>
+            <image src="menu2.png" onclick="openmenu()" class="fav" width="40px"></image>
+            </nav>
+            <div class="header-text">
+                <p>Student</p>
+                <h1>Hi,I'm <span>Durga Pranathi</span> <br>Chinthala </h1>
+            </div>
+        </div>
+    </div>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                 <!-- <p>ths is about me</p>-->
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Iam a 3 rd year CSE student at sathyabama institute of science and technology.<br>
+                        I'm passionate about coding.Iam a Leetcoder trying to improve my problem solving skills.<br>
+                        I am skilled in java,HTML,CSS,javascript.<br>
+                        Trying to get better at DataStructures and Algorithms</p>
+
+                        <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                         <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Programming</span><br>Java</li>
+                            <li><span>Web development</span><br>HTML,CSS,JAVASCRIPT</li>
+                            <li><span>DataStructure and Algorithms</span><br></li>
+                            
+                        </ul>
+                    </div>
+                     <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2020-2024</span><br>B.E CSE <br>Sathyabama University,Chennai<br> cgpa : 9.5 </li>
+                            <li><span>2020</span><br>Intermediate<br>Sri Chaitanya Junior collage,Vijayawada <br>cgpa : 9.94</li>
+                            <li><span>2018</span><br>10 th class <br>Sri Chaitanya High School<br>cgpa :10</li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   <! -- ---------------projects--------- -->
+   <div id="projects">
+    <div class="container">
+        <h1 class="sub-title">My Projects</h1>
+        <div class="projects-list">
+            <div>
+                <h2>HotStar Clone</h2>
+                <p>hotstar clone :HTML,CSS,BOOTSTRAP are used</p>
+                <a href="https://codesandbox.io/s/hopeful-wave-5ytv93?file=/index.js">Project link</a>
+            </div>
+
+            <div>
+                <h2>Algorithm Visualizer</h2>
+                <p>Algorithm Visualizer:bubble sort,selection sort ,insertion sort are visualized</p>
+                <a href="#">Project link</a>
+            </div>
+
+            <div>
+                <h2>shortest path</h2>
+                <p>hortest path:Dijakstras algorithm is uesd</p>
+                <a href="#">Project link</a>
+            </div>
+        </div>
+    </div>
+   </div>
+
+   <!-- ----------portfolio------------- -->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1><br>
+        <div class="work-list">
+            <h2>CERTIFICATES</h2><br>
+            <div class="work">
+                <p>FREECODECAMP</p>
+                <a href="https://www.freecodecamp.org/certification/CHINTHALADURGAPRANATHI/responsive-web-design">Certificate</a>
+            </div>
+            <div class="work">
+                <p>WILL BE ADDING</p>
+                <a href="#">download</a></div>
+                <div class="work">
+                <p>WILL BE ADDING</p>
+                <a href="#">download</a>
+            </div>
+           
+        </div>
+    </div>
+</div>
+<!--  -----contact--------- -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class=""sub-title">Contact Me</h1>
+                <image src="gmail.png" width="30px"  <p>durgapranathi2002@gmail.com </p> 
+               
+                <div class="social-icons">
+                <a href="https://www.linkedin.com/in/durga-pranathi-303860229/"><image src="linkedin.jpg" width="50px"></a>
+                <a href="https://github.com/Durgapranathi6699"><image src="github.png" width="50px" style="background-color:white"></a>
+                </div>
+                <a href="pranati Resume (1).pdf"><button type="button" class="btn">Download CV</button></a>
+            </div>
+            <div class="contact-right">
+            <form>
+                <input type="text" name="Name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your email" required>
+                <textarea  name="Meassage" rows="6" placeholder="Your Message" ></textarea>
+                <button type="submit" class="button">Submit</button>
+            </form>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p>Thanks for visiting my portfolio website</p>
+
+    </div>
+</div>
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents=document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+          document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+    <script>
+        var sidemenu=document.getElementById("sidemenu");
+        function openmenu(){
+            sidemenu.style.right="0";
+        }
+        function closemenu(){
+            sidemenu.style.right="-200px";
+        }
+    </script>
+    
+</body>
+</html>
